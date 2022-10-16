@@ -11,21 +11,23 @@ import * as echarts from "echarts";
 import { BUG_TYPE, bugTypeToCN } from "../enum/bugType";
 
 const dataList = ref([]);
+const startDate = ref('')
+const endDate = ref('')
 
-console.log(dataList, "dataList");
-
-async function setChart(data) {
+async function setChart (data) {
+  startDate.value = data.date[0]
+  endDate.value = data.date[1]
+  option.title.subtext = `${startDate.value} ~ ${endDate.value}`
   option.series[0].data.forEach((item) => {
     item.value = data[item.key];
   });
   await getChart();
-  console.log(dataList.value, "dataListdataList");
 }
 
 const option = reactive({
   title: {
     text: "bug分类统计图",
-    subtext: "8.15~9.15",
+    subtext: '请选择统计周期',
     left: "center",
   },
   tooltip: {
@@ -67,7 +69,7 @@ onMounted(async() => {
       key: item,
     };
   });
-  console.log(option,'dataList.value')
+  
   await getChart();
 });
 </script>
