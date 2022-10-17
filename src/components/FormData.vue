@@ -12,6 +12,9 @@
     <a-form-item :name="BUG_TYPE.TEST_REASON" :label="bugTypeToCN[BUG_TYPE.TEST_REASON]">
       <a-input placeholder="请输入测试用例未覆盖bug数量" v-model:value="dataForm.testReason" />
     </a-form-item>
+    <a-form-item :name="BUG_TYPE.AFTER_END_REASON" :label="bugTypeToCN[BUG_TYPE.AFTER_END_REASON]">
+      <a-input placeholder="请输入因后端导致的bug数量" v-model:value="dataForm.afterEndReason" />
+    </a-form-item>
     <a-form-item :name="BUG_TYPE.HISTORY_REASON" :label="bugTypeToCN[BUG_TYPE.HISTORY_REASON]">
       <a-input placeholder="请输入历史bug数量" v-model:value="dataForm.historyReason" />
     </a-form-item>
@@ -19,7 +22,7 @@
       <a-range-picker value-format="YYYY-MM-DD" style="width:100%" v-model:value="dataForm.date" />
     </a-form-item>
     <a-form-item :wrapper-col="{ ...layout.wrapperCol, offset: 5 }">
-      <a-button type="primary" html-type="submit">图表生成12</a-button>
+      <a-button type="primary" html-type="submit">图表生成</a-button>
     </a-form-item>
   </a-form>
 </template>
@@ -41,6 +44,7 @@ const dataForm = reactive({
   prdReason:'',
   testReason:'',
   historyReason: '',
+  afterEndReason:'',
   date:[]
 });
 
