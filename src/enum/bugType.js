@@ -4,7 +4,8 @@ export const BUG_TYPE = {
   UI_REASON: 'uiReason',
   PRD_REASON: 'prdReason',
   TEST_REASON: 'testReason',
-  HISTORY_REASON:'historyReason'
+  HISTORY_REASON: 'historyReason',
+  AFTER_END_REASON: 'afterEndReason'
 }
 
 export const bugTypeToCN = {
@@ -13,4 +14,5 @@ export const bugTypeToCN = {
   [BUG_TYPE.PRD_REASON]: 'prd描述问题',
   [BUG_TYPE.TEST_REASON]: '测试用例未覆盖',
   [BUG_TYPE.HISTORY_REASON]: '历史bug',
+  [BUG_TYPE.AFTER_END_REASON]: '后端接口原因',
 }

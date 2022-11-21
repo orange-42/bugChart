@@ -1,22 +1,22 @@
 <template>
   <a-form :model="dataForm" v-bind="layout" name="nest-messages" @finish="onFinish">
     <a-form-item :name="BUG_TYPE.PERSON_REASON" :label="bugTypeToCN[BUG_TYPE.PERSON_REASON]">
-      <a-input placeholder="请输入个人代码原因bug数量" v-model:value="dataForm.personReason" />
+      <a-input-number :precision="0" style="width:100%" placeholder="请输入个人代码原因bug数量" v-model:value="dataForm.personReason" />
     </a-form-item>
     <a-form-item :name="BUG_TYPE.UI_REASON" :label="bugTypeToCN[BUG_TYPE.UI_REASON]">
-      <a-input placeholder="请输入UI未标注/无交互图bug数量" v-model:value="dataForm.uiReason" />
+       <a-input-number :precision="0" style="width:100%" placeholder="请输入UI未标注/无交互图bug数量" v-model:value="dataForm.uiReason" />
     </a-form-item>
     <a-form-item :name="BUG_TYPE.PRD_REASON" :label="bugTypeToCN[BUG_TYPE.PRD_REASON]">
-      <a-input placeholder="请输入prd描述问题bug数量" v-model:value="dataForm.prdReason" />
+       <a-input-number :precision="0" style="width:100%" placeholder="请输入prd描述问题bug数量" v-model:value="dataForm.prdReason" />
     </a-form-item>
     <a-form-item :name="BUG_TYPE.TEST_REASON" :label="bugTypeToCN[BUG_TYPE.TEST_REASON]">
-      <a-input placeholder="请输入测试用例未覆盖bug数量" v-model:value="dataForm.testReason" />
+       <a-input-number :precision="0" style="width:100%" placeholder="请输入测试用例未覆盖bug数量" v-model:value="dataForm.testReason" />
     </a-form-item>
     <a-form-item :name="BUG_TYPE.AFTER_END_REASON" :label="bugTypeToCN[BUG_TYPE.AFTER_END_REASON]">
-      <a-input placeholder="请输入因后端导致的bug数量" v-model:value="dataForm.afterEndReason" />
+       <a-input-number :precision="0" style="width:100%" placeholder="请输入因后端导致的bug数量" v-model:value="dataForm.afterEndReason" />
     </a-form-item>
     <a-form-item :name="BUG_TYPE.HISTORY_REASON" :label="bugTypeToCN[BUG_TYPE.HISTORY_REASON]">
-      <a-input placeholder="请输入历史bug数量" v-model:value="dataForm.historyReason" />
+       <a-input-number :precision="0" style="width:100%" placeholder="请输入历史bug数量" v-model:value="dataForm.historyReason" />
     </a-form-item>
     <a-form-item name="date" label="统计周期">
       <a-range-picker value-format="YYYY-MM-DD" style="width:100%" v-model:value="dataForm.date" />
