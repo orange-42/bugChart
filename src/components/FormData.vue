@@ -34,8 +34,8 @@ import { BUG_TYPE, bugTypeToCN } from '../enum/bugType'
 const emit = defineEmits(["setChart"]);
 
 const layout = {
-  labelCol: { span: 6 },
-  wrapperCol: { span: 16 },
+  labelCol: { span: 10 },
+  wrapperCol: { span: 20 },
 };
 
 const dataForm = reactive({
